@@ -63,7 +63,7 @@ def check_python_version() -> CheckResult:
         int(sys.version_info.minor),
         int(sys.version_info.micro),
     )
-    if version_tuple >= (3, 11, 0):
+    if version_tuple >= (3, 10, 0):
         return CheckResult(
             name="python_version",
             status="pass",
@@ -79,7 +79,7 @@ def check_python_version() -> CheckResult:
             f"Python {sys.version_info.major}.{sys.version_info.minor}."
             f"{sys.version_info.micro} is unsupported"
         ),
-        fix="Install Python 3.11 or newer",
+        fix="Install Python 3.10 or newer",
     )
 
 
